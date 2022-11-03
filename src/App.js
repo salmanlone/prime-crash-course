@@ -1,11 +1,11 @@
 import './App.css';
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Button } from 'primereact/button';
 import { Menubar } from 'primereact/menubar';
-import { InputText } from 'primereact/inputtext';
 
 import Greet from './components/greet';
 import Counter from './components/counter';
+import UserList from './components/list';
 
 function App() {
 
@@ -16,8 +16,9 @@ function App() {
         start={"This is a demo project of Prime React"}
         end={<Button label="Logout" icon="pi pi-power-off" />}
       />
-      <Counter />
-      <Greet />
+      {/* <Counter />
+      <Greet /> */}
+      <UserList />
     </div>
   );
 }
