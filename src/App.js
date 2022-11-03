@@ -1,11 +1,23 @@
 import './App.css';
-import { Dialog } from 'primereact/dialog';
+import React, { useEffect, useState } from "react";
 import { Button } from 'primereact/button';
+import { Menubar } from 'primereact/menubar';
+import { InputText } from 'primereact/inputtext';
+
+import Greet from './components/greet';
+import Counter from './components/counter';
 
 function App() {
+
   return (
     <div className="App">
-      <Button label="Save" />
+      <Menubar
+        className="bg-blue-600 p-3 text-3xl text-white"
+        start={"This is a demo project of Prime React"}
+        end={<Button label="Logout" icon="pi pi-power-off" />}
+      />
+      <Counter />
+      <Greet />
     </div>
   );
 }
